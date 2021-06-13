@@ -2,22 +2,30 @@
 //  SideMenuViewController.swift
 //  SideMenu
 //
-//  Created by Mohamed Ali on 12/06/2021.
+//  Created by Mohamed Ali on 13/06/2021.
 //
 
 import UIKit
 
 class SideMenuViewController: UIViewController {
+    
+    @IBOutlet weak var BackgoundView: UIView!
+    @IBOutlet weak var ProfileImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        setupView()
     }
     
-    @IBAction func SideMenuButton (_ sender:Any) {
-        print("Side Menu Presented")
+    private func setupView() {
+        
+        BackgoundView.layer.cornerRadius = 40
+        BackgoundView.clipsToBounds = true
+        
+        ProfileImage.layer.cornerRadius = ProfileImage.bounds.width / 2
+        ProfileImage.clipsToBounds = true
+        
     }
 
-
 }
-
