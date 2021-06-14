@@ -40,15 +40,40 @@ class MainViewController: UIViewController {
         print("Side Menu Presented")
 //        SideMenuView.isHidden = false
 //        SideMenuLeading.constant = 108
-        BackgroundSideMenu.isHidden = false
-        BackgroundSideMenuLeading.constant = 0
+        
+        UIView.animate(withDuration: 0.2) {
+            
+            self.BackgroundSideMenu.isHidden = false
+            self.BackgroundSideMenuLeading.constant = 0
+            
+            self.view.layoutIfNeeded()
+
+        }
+
+        
+//        BackgroundSideMenu.isHidden = false
+//        BackgroundSideMenuLeading.constant = 0
         //SideMenuLeading.constant = 88
     }
     
     private func HideMenu() {
         print("Side Menu Hidden")
-        LoadPage()
+        
+        UIView.animate(withDuration: 0.3) {
+            
+            self.BackgroundSideMenuLeading.constant = 414
+            
+            self.view.layoutIfNeeded()
+
+        }completion: { state in
+            self.BackgroundSideMenu.isHidden = true
+        }
+        
+        
+        
     }
+    
+    
 
 
 }

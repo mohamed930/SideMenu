@@ -28,8 +28,8 @@
                                     <action selector="SideMenuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XVy-Se-br2"/>
                                 </connections>
                             </button>
-                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCR-wW-hRZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCR-wW-hRZ">
+                                <rect key="frame" x="-414" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVY-wF-FQS">
                                         <rect key="frame" x="0.0" y="0.0" width="326" height="896"/>
